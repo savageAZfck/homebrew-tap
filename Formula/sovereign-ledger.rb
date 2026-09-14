@@ -1,15 +1,13 @@
 class SovereignLedger < Formula
-  desc "Hardened hash-chained audit ledger: HMAC entries, Merkle proofs, Secure Enclave anchors"
+  desc "Hardened hash-chained audit ledger (beta): HMAC entries, Merkle proofs, Secure Enclave anchors"
   homepage "https://github.com/savageAZfck/sovereign_ledger"
-  url "https://github.com/savageAZfck/sovereign_ledger/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "b7822c7b976aeb82639ec4c803e1ef9de0c444eae6ec159985a752b89f417c88"
+  url "https://github.com/savageAZfck/sovereign_ledger/releases/download/v0.3.1/sovereign_ledger-v0.3.1-macos-universal.tar.gz"
+  sha256 "108c123abb78e230937312a38dd65298df7711be017b86bcbb2f4606beb2a5d5"
+  version "0.3.1-beta"
   license :cannot_represent
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "build", "--release", "--locked"
-    bin.install "target/release/sovereign_ledger"
+    bin.install "sovereign_ledger"
   end
 
   test do
