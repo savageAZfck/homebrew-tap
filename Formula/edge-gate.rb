@@ -1,16 +1,16 @@
 class EdgeGate < Formula
-  desc "Local LLM edge gateway: dedup, blind, filter, meter, audit"
-  homepage "https://github.com/savageAZfck/edge_gate"
-  url "https://github.com/savageAZfck/edge_gate/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "2efb70caaf7b3666f2441ebf619f4050141716fbf3494e1ae658bc8a4c629883"
-  license "MIT"
+  desc "Local LLM edge gateway (beta): dedup, blind, filter, meter, audit"
+  homepage "https://github.com/savageAZfck/edge-gate-releases"
+  url "https://github.com/savageAZfck/edge-gate-releases/releases/download/v0.1.0/edge_gate-0.1.0-aarch64-apple-darwin.tar.gz"
+  sha256 "8a29f4ee933a0a11df3a2f5bc0009e17d2d73b24569ff52c5b2b13bf6e70786d"
+  version "0.1.0-beta"
+  license :cannot_represent
 
-  depends_on "rust" => :build
+  depends_on :macos
+  depends_on arch: :arm64
 
   def install
-    system "cargo", "build", "--release", "--locked"
-    bin.install "target/release/edge_gate"
-    etc.install "edge_gate.toml" => "edge_gate.toml"
+    bin.install "edge_gate"
   end
 
   test do
