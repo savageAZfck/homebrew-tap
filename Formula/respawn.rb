@@ -4,7 +4,7 @@ class Respawn < Formula
   url "https://github.com/savageAZfck/respawn-releases/releases/download/v0.2.0/respawn-v0.2.0-macos-universal.tar.gz"
   sha256 "d14042cd0b9a0f2264373dd25fe0e641df5884f575b6e01ff9a70c6b829cfd86"
   version "0.2.0-beta"
-  license :cannot_represent
+  license "FSL-1.1-ALv2"
 
   depends_on :macos
 
