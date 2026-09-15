@@ -17,7 +17,7 @@ class StateFabric < Formula
       system bin/"state_fabric", "init"
       (testpath/"proj/file.txt").write("hello")
       system bin/"state_fabric", "snap", "-m", "v1"
-      (testpath/"proj/file.txt").write("changed")
+      File.write(testpath/"proj/file.txt", "changed")
       system bin/"state_fabric", "revert", "head", "--force"
       assert_equal "hello", (testpath/"proj/file.txt").read
     end
