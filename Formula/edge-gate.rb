@@ -4,7 +4,7 @@ class EdgeGate < Formula
   url "https://github.com/savageAZfck/edge-gate-releases/releases/download/v0.1.0/edge_gate-0.1.0-aarch64-apple-darwin.tar.gz"
   sha256 "8a29f4ee933a0a11df3a2f5bc0009e17d2d73b24569ff52c5b2b13bf6e70786d"
   version "0.1.0-beta"
-  license :cannot_represent
+  license "FSL-1.1-ALv2"
 
   depends_on :macos
   depends_on arch: :arm64
