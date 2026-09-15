@@ -1,9 +1,9 @@
 class Respawn < Formula
   desc "Versioned state fabric (beta): content-addressed snapshots, atomic revert, drift detection, LAN sync"
   homepage "https://github.com/savageAZfck/respawn-releases"
-  url "https://github.com/savageAZfck/respawn-releases/releases/download/v0.1.0/respawn-v0.1.0-macos-universal.tar.gz"
-  sha256 "7a05dc328bae76725b9e052913d3753abd98b9a9746a29e4242000d2ec49cd5f"
-  version "0.1.0-beta"
+  url "https://github.com/savageAZfck/respawn-releases/releases/download/v0.2.0/respawn-v0.2.0-macos-universal.tar.gz"
+  sha256 "d14042cd0b9a0f2264373dd25fe0e641df5884f575b6e01ff9a70c6b829cfd86"
+  version "0.2.0-beta"
   license :cannot_represent
 
   depends_on :macos
